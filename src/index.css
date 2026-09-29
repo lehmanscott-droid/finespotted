@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-ink text-paper;
+  }
+}
+
+@layer components {
+  /* Small uppercase tracking used for nav, labels and buttons */
+  .label {
+    @apply text-[11px] uppercase tracking-label font-medium;
+  }
+  .btn {
+    @apply label flex w-full items-center justify-center px-6 py-4 transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-ink text-paper hover:bg-flame;
+  }
+  .btn-disabled {
+    @apply btn cursor-not-allowed bg-stone/20 text-stone;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
