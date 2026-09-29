@@ -17,8 +17,8 @@ export const products = [
     id: 'chomp-chomp-trucker',
     name: 'Chomp Chomp Trucker',
     subtitle: 'Black / embroidered',
-    price: 65, // placeholder — USD
-    edition: 50, // placeholder — total pieces in the run
+    price: 85, // USD
+    edition: 50, // total pieces in the run
     soldOut: false,
     stripeLink: '', // placeholder — paste your https://buy.stripe.com/... link
     size: 'One size — adjustable snapback',

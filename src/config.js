@@ -7,8 +7,8 @@
 export const BRAND = {
   name: 'finespotted',
   tagline: 'finespotted & cutthroat',
-  contactEmail: 'hello@finespotted.com', // placeholder — change to your inbox
-  instagram: 'https://instagram.com/finespotted', // placeholder
+  contactEmail: 'scott@finespotted.com',
+  instagram: 'https://instagram.com/finespotted',
 }
 
 /*
@@ -19,7 +19,7 @@ export const BRAND = {
 export const DROP = {
   number: '001',
   name: 'Chomp Chomp',
-  date: '2026-10-10T12:00:00-04:00', // placeholder — noon Eastern, Oct 10
+  date: '2026-10-10T12:00:00-04:00', // noon Eastern, Oct 10
 }
 
 /*
@@ -29,7 +29,7 @@ export const DROP = {
  * limits live in Stripe (see "Limit the number of payments" on each link).
  * Set to '' to hide the early-access option entirely.
  */
-export const EARLY_ACCESS_CODE = 'CUTTHROAT' // placeholder
+export const EARLY_ACCESS_CODE = 'CUTTHROAT'
 
 /*
  * Formspree form ID for the "be in the know first" waitlist — the part after
