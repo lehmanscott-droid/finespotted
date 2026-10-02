@@ -8,7 +8,7 @@ export const BRAND = {
   name: 'finespotted cutthroat',
   tagline: 'Limited runs. No restocks.',
   contactEmail: 'scott@finespotted.com',
-  instagram: 'https://instagram.com/finespotted',
+  instagram: 'https://instagram.com/finespottedcutthroat',
 }
 
 /*
