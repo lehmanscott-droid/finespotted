@@ -12,6 +12,9 @@ export default function Footer() {
           <a href={`mailto:${BRAND.contactEmail}`} className="label hover:text-flame">
             {BRAND.contactEmail}
           </a>
+          <a href="#policies" className="label hover:text-flame">
+            Shipping &amp; returns
+          </a>
           <a href={BRAND.instagram} target="_blank" rel="noreferrer" className="label hover:text-flame">
             Instagram
           </a>

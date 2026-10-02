@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 /*
- * Three states: SOLD OUT → locked (before the drop) → BUY NOW.
- * "Buy now" is a plain link to the piece's Stripe Payment Link, so checkout,
+ * Three states: SOLD OUT → locked (before the drop) → BUY NOW / PRE-ORDER.
+ * The buy state is a plain link to the piece's Stripe Payment Link, so checkout,
  * payment and shipping details are all handled on Stripe's hosted page.
  */
 export default function BuyButton({ product, canBuy }) {
   const [missingLink, setMissingLink] = useState(false)
+  const label = `${product.preorder ? 'Pre-order' : 'Buy now'} — $${product.price}`
 
   if (product.soldOut) {
     return (
@@ -28,7 +29,7 @@ export default function BuyButton({ product, canBuy }) {
     return (
       <>
         <button type="button" className="btn-primary" onClick={() => setMissingLink(true)}>
-          Buy now — ${product.price}
+          {label}
         </button>
         {missingLink && (
           <p className="mt-3 text-center text-sm text-flame" role="status">
@@ -43,7 +44,7 @@ export default function BuyButton({ product, canBuy }) {
 
   return (
     <a href={product.stripeLink} className="btn-primary">
-      Buy now — ${product.price}
+      {label}
     </a>
   )
 }

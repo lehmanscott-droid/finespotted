@@ -8,11 +8,12 @@ import Hero from './components/Hero.jsx'
 import ProductSection from './components/ProductSection.jsx'
 import EarlyAccess from './components/EarlyAccess.jsx'
 import WaitlistPopup from './components/WaitlistPopup.jsx'
+import Policies from './components/Policies.jsx'
 import Footer from './components/Footer.jsx'
 
 /*
  * ─── COMPOSITION ROOT ─────────────────────────────────────────────────────
- * The page is one long scroll: full-bleed hero → the drop → footer.
+ * The page is one long scroll: full-bleed hero → the drop → policies → footer.
  * App owns the only cross-cutting state:
  *   • the drop countdown (shared by the hero and every Buy button)
  *   • whether this visitor unlocked early access (kept for the browser tab)
@@ -51,6 +52,7 @@ export default function App() {
             onEarlyAccess={EARLY_ACCESS_CODE ? () => setGateOpen(true) : null}
           />
         ))}
+        <Policies />
       </main>
       <Footer />
       {!countdown.done && <WaitlistPopup />}

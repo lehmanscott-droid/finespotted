@@ -1,4 +1,4 @@
-import { DROP } from '../config.js'
+import { BRAND, DROP } from '../config.js'
 import CropImage from './CropImage.jsx'
 import BuyButton from './BuyButton.jsx'
 
@@ -38,6 +38,15 @@ export default function ProductSection({ product, canBuy, countdown, unlocked, o
           <div className="mt-8">
             <BuyButton product={product} canBuy={canBuy} />
 
+            {!product.soldOut && product.shipsWithin && (
+              <p className="mt-3 text-center text-sm text-stone">
+                Ships within {product.shipsWithin} of your order.{' '}
+                <a href="#policies" className="underline underline-offset-4 hover:text-ink">
+                  Shipping &amp; returns
+                </a>
+              </p>
+            )}
+
             {!product.soldOut && !canBuy && (
               <p className="mt-3 text-center text-sm text-stone">
                 Drops {dropDate}
@@ -57,6 +66,15 @@ export default function ProductSection({ product, canBuy, countdown, unlocked, o
           </div>
 
           <p className="mt-10 text-sm leading-relaxed text-ink/80">{product.description}</p>
+          {product.customNote && (
+            <p className="mt-4 text-sm leading-relaxed text-ink/80">
+              {product.customNote} Email{' '}
+              <a href={`mailto:${BRAND.contactEmail}?subject=Custom%20${encodeURIComponent(product.name)}`} className="underline underline-offset-4 hover:text-flame">
+                {BRAND.contactEmail}
+              </a>{' '}
+              to request custom work.
+            </p>
+          )}
           <ul className="mt-6 space-y-2 border-t border-ink/10 pt-6 text-sm text-ink/80">
             {product.details.map((d) => (
               <li key={d}>— {d}</li>
