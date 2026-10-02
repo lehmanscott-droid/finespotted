@@ -20,7 +20,7 @@ export const products = [
     price: 85, // USD
     edition: 50, // total pieces in the run
     soldOut: false,
-    stripeLink: '', // placeholder — paste your https://buy.stripe.com/... link
+    stripeLink: 'https://buy.stripe.com/28E14o1Ba9tUfDH6mE53O01', // live Payment Link
     size: 'One size — adjustable snapback',
     description:
       'Five-panel trucker in black cotton twill with breathable mesh back. ' +
