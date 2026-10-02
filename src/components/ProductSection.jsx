@@ -26,7 +26,7 @@ export default function ProductSection({ product, canBuy, countdown, unlocked, o
           <p className="label text-stone">
             Drop {DROP.number} · Limited to {product.edition}
           </p>
-          <h2 className="mt-3 text-3xl font-medium uppercase tracking-tight sm:text-4xl">{product.name}</h2>
+          <h2 className="display mt-3 text-2xl sm:text-3xl">{product.name}</h2>
           <p className="mt-1 text-stone">{product.subtitle}</p>
           <p className="mt-6 text-xl tabular-nums">${product.price}</p>
 

@@ -15,6 +15,14 @@
 }
 
 @layer components {
+  /* The FINESPOTTED CUTTHROAT wordmark: Bodoni caps, wide-spaced */
+  .wordmark {
+    @apply font-serif font-medium uppercase tracking-[0.24em];
+  }
+  /* Serif headings (drop + product names), a touch tighter than the wordmark */
+  .display {
+    @apply font-serif font-medium uppercase tracking-[0.14em];
+  }
   /* Small uppercase tracking used for nav, labels and buttons */
   .label {
     @apply text-[11px] uppercase tracking-label font-medium;

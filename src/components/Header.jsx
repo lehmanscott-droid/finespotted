@@ -6,7 +6,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-30 bg-paper/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-8">
         <div className="flex items-center gap-8 sm:gap-10">
-          <a href="#top" className="font-script text-3xl leading-none" aria-label={`${BRAND.name} — home`}>
+          <a href="#top" className="wordmark whitespace-nowrap text-[13px] sm:text-[15px]" aria-label={`${BRAND.name} — home`}>
             {BRAND.name}
           </a>
           <div className="hidden items-center gap-8 sm:flex">

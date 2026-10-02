@@ -30,7 +30,7 @@ export default function EarlyAccess({ onUnlock, onClose }) {
     >
       <form onClick={(e) => e.stopPropagation()} onSubmit={submit} className="w-full max-w-sm bg-paper p-8">
         <p className="label text-stone">Early access</p>
-        <h2 id="early-title" className="mt-2 text-2xl font-medium uppercase tracking-tight">
+        <h2 id="early-title" className="display mt-2 text-xl">
           Enter your code
         </h2>
         <input

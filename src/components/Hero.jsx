@@ -29,7 +29,7 @@ export default function Hero({ countdown, unlocked }) {
           <p className="label text-stone">
             Drop {DROP.number} — {status}
           </p>
-          <h1 className="mt-2 text-4xl font-medium uppercase tracking-tight sm:text-6xl">{DROP.name}</h1>
+          <h1 className="display mt-2 text-2xl sm:text-3xl">{DROP.name}</h1>
         </div>
 
         {countdown.done ? (

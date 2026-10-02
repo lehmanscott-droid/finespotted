@@ -61,7 +61,7 @@ export default function WaitlistPopup() {
             ) : (
               <form onSubmit={submit} className="space-y-3">
                 <p className="text-sm text-ink/70">Drop alerts and early access codes. Nothing else.</p>
-                <input type="hidden" name="_subject" value="New finespotted waitlist sign-up" />
+                <input type="hidden" name="_subject" value="New finespotted cutthroat waitlist sign-up" />
                 <input
                   type="email"
                   name="email"
