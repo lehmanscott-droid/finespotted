@@ -13,7 +13,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-        script: ['Yellowtail', 'cursive'],
+        // Didone serif for the wordmark and headings — fashion-house luxury
+        serif: ['"Bodoni Moda"', 'Didot', '"Bodoni 72"', 'Georgia', 'serif'],
       },
       letterSpacing: {
         label: '0.14em',

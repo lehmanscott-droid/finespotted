@@ -1,6 +1,7 @@
-# finespotted
+# finespotted cutthroat
 
-Single-drop luxury streetwear landing page — **finespotted & cutthroat**.
+Single-drop luxury streetwear landing page for **finespotted cutthroat**,
+live at finespottedcutthroat.com.
 React 18 + Vite + Tailwind CSS. No backend: Stripe Payment Links take the
 money, Formspree collects the waitlist.
 

@@ -5,8 +5,8 @@
  */
 
 export const BRAND = {
-  name: 'finespotted',
-  tagline: 'finespotted & cutthroat',
+  name: 'finespotted cutthroat',
+  tagline: 'Limited runs. No restocks.',
   contactEmail: 'scott@finespotted.com',
   instagram: 'https://instagram.com/finespotted',
 }

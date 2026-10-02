@@ -4,10 +4,14 @@ Guidance for Claude Code working in this repository.
 
 ## What this is
 
-**finespotted** — a single-page landing site for limited single drops of
+**finespotted cutthroat** (finespottedcutthroat.com) — a single-page landing site for limited single drops of
 streetwear, accessories and art. Clean, minimal, product-first (inspired by
 toutlemondela.com: full-bleed product imagery, small uppercase nav, a
 "be in the know first" pill). React 18 + Vite + Tailwind CSS. No backend.
+
+Type: the wordmark and headings use **Bodoni Moda** caps (`.wordmark` /
+`.display` in `index.css`); everything else is Inter. Keep display type
+small: the product photo is the focal point.
 
 ## Commands
 
