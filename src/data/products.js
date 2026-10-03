@@ -38,6 +38,12 @@ export const products = [
       'Plastic snapback closure',
       'Numbered limited run',
     ],
+    // Silent 5s loop for the hero on wide screens (see Hero.jsx). Remove to show the still photo.
+    heroVideo: {
+      src: 'products/hero-loop.mp4',
+      webm: 'products/hero-loop.webm',
+      poster: 'products/hero-loop-poster.jpg',
+    },
     images: [
       { src: 'products/chomp-chomp.webp', position: 'left', alt: 'Chomp Chomp trucker — front' },
       { src: 'products/chomp-chomp.webp', position: 'right', alt: 'Chomp Chomp trucker — back' },

@@ -180,7 +180,10 @@ large screens. Content sits in a centred container up to 1536px wide
 
 - **Hero:** fills the viewport (`100svh`) below the 64px fixed header. Phones
   show the front of the piece in a 3:4 crop; from 640px the full front + back
-  photo is shown with `object-contain`. Drop status, name and countdown sit
+  is shown with `object-contain` — as a silent, seamless 5s light-sweep loop
+  (`heroVideo` on the product) when present, or the still photo for
+  reduced-motion users and pieces without a loop. The loop is calm on purpose:
+  a single light sweep, camera still, product unchanged. Drop status, name and countdown sit
   along the bottom edge.
 - **Product section:** from 1024px a two-column grid (1.4fr images : 1fr
   details, 64px gap). Images stack in a two-up grid with an 8px gap; the
