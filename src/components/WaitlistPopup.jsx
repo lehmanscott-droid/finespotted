@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FORMSPREE_FORM_ID } from '../config.js'
 import { readStore, writeStore } from '../storage.js'
 
@@ -6,11 +6,35 @@ import { readStore, writeStore } from '../storage.js'
  * "be in the know first" — a small pill in the bottom-left corner that opens
  * into an email sign-up. Submissions go to Formspree (no backend). Once a
  * visitor dismisses or signs up, it stays hidden on this browser.
+ *
+ * On phones the pill would sit on top of whatever text is scrolling past, so
+ * it slides out of view while the visitor scrolls and comes back a moment
+ * after they stop. It stays put while the sign-up form is open.
  */
+const SETTLE_MS = 1000
 export default function WaitlistPopup() {
   const [hidden, setHidden] = useState(() => readStore('localStorage', 'fs-waitlist') === 'done')
   const [open, setOpen] = useState(false)
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [scrolling, setScrolling] = useState(false)
+
+  useEffect(() => {
+    if (hidden || open) return
+    const phone = window.matchMedia('(max-width: 639px)')
+    let timer
+    function onScroll() {
+      if (!phone.matches) return
+      setScrolling(true)
+      clearTimeout(timer)
+      timer = setTimeout(() => setScrolling(false), SETTLE_MS)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      clearTimeout(timer)
+      setScrolling(false)
+    }
+  }, [hidden, open])
 
   if (hidden) return null
 
@@ -41,7 +65,11 @@ export default function WaitlistPopup() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 z-40 max-w-[calc(100vw-2rem)] sm:bottom-6 sm:left-6">
+    <div
+      className={`fixed bottom-4 left-4 z-40 max-w-[calc(100vw-2rem)] transition duration-300 motion-reduce:transition-none sm:bottom-6 sm:left-6 ${
+        scrolling ? 'pointer-events-none translate-y-[calc(100%+1rem)] opacity-0' : ''
+      }`}
+    >
       <div className="rounded-xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
         <div className="flex items-center gap-4 py-3 pl-5 pr-3">
           <button type="button" onClick={() => setOpen((o) => !o)} className="text-[15px] font-semibold" aria-expanded={open}>
