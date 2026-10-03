@@ -21,6 +21,18 @@ npm install / npm run dev / npm run build / npm run preview
 
 No test runner, linter or type checker is configured. Do not invent them.
 
+## Browser checks (Playwright MCP)
+
+`.mcp.json` registers the **Playwright MCP** server so Claude Code can drive a
+real browser: start `npm run dev`, open the printed localhost URL, check the
+countdown, waitlist popup, early-access code and Buy button, and take
+screenshots (try a phone size such as `iPhone 15`). `.claude/settings.json`
+pre-approves it. In Claude Code cloud sessions it runs headless on the
+pre-installed Chromium at `/opt/pw-browsers/chromium`; elsewhere it uses
+Playwright's own browser. Pinned to `@playwright/mcp@0.0.83`, the release
+verified against the cloud Chromium — re-test before bumping. Snapshots land
+in `.playwright-mcp/` (gitignored). No API key needed.
+
 ## Architecture
 
 - `src/App.jsx` — composition root. Owns the drop countdown, the early-access
