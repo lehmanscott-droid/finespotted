@@ -6,3 +6,6 @@ dist
 
 # Playwright MCP snapshots and screenshots
 .playwright-mcp/
+
+# Impeccable per-developer overrides
+.impeccable/config.local.json
