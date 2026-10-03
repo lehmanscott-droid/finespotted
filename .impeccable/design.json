@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T12:15:14+00:00",
+  "title": "Design System: finespotted cutthroat",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Studio Paper",
+        "canonical": "oklch(96.7% 0.003 106.4)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242423",
+          "#40403e",
+          "#5e5e5c",
+          "#7d7d7b",
+          "#9e9e9d",
+          "#c4c4c2",
+          "#eeeeec"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(17.8% 0 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "oklch(63.2% 0.006 106.6)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403c",
+          "#5e5e5a",
+          "#7d7d7a",
+          "#9f9f9b",
+          "#c4c4c0",
+          "#efefea"
+        ]
+      },
+      "flame": {
+        "role": "primary",
+        "displayName": "Drop Accent: Flame",
+        "canonical": "oklch(59.9% 0.211 31.1)",
+        "tonalRamp": [
+          "#1d0201",
+          "#470903",
+          "#761508",
+          "#a92311",
+          "#df321b",
+          "#f3715c",
+          "#feac9d",
+          "#ffe8e3"
+        ]
+      },
+      "photo-white": {
+        "role": "neutral",
+        "displayName": "Photo White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Brand name in header (13–15px) and footer (20–24px)."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Drop and product names, section headings; never above 30px."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Countdown digits; prices use Inter 20px tabular."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions, policy copy, notes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav, buttons, edition lines, units, footer links."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pill-lift",
+        "value": "0 8px 30px rgba(0,0,0,0.12)",
+        "purpose": "Only on the floating waitlist pill."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color-shift",
+        "value": "200ms ease",
+        "purpose": "Hover colour changes on buttons and links."
+      },
+      {
+        "name": "pill-fade",
+        "value": "300ms ease",
+        "purpose": "Waitlist pill fading out while scrolling on phones."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Full-width square ink button; hover turns it the drop accent.",
+      "html": "<button class=\"ds-btn-primary\">Pre-order — $85</button>",
+      "css": ".ds-btn-primary{display:flex;width:100%;align-items:center;justify-content:center;padding:16px 24px;background:#111111;color:#f4f4f2;border:0;border-radius:0;font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:background-color 200ms;}.ds-btn-primary:hover{background:#e2361f;}.ds-btn-primary:focus-visible{outline:2px solid #111111;outline-offset:2px;}"
+    },
+    {
+      "name": "Disabled Button",
+      "kind": "button",
+      "refersTo": "button-disabled",
+      "description": "States a locked or sold-out piece instead of hiding the button.",
+      "html": "<button class=\"ds-btn-disabled\" disabled>Locked until drop</button>",
+      "css": ".ds-btn-disabled{display:flex;width:100%;align-items:center;justify-content:center;padding:16px 24px;background:rgba(138,138,134,0.2);color:#8a8a86;border:0;border-radius:0;font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:not-allowed;}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square hairline field; border goes to full ink on focus.",
+      "html": "<input class=\"ds-input\" type=\"email\" placeholder=\"email@address.com\" aria-label=\"Email address\">",
+      "css": ".ds-input{width:100%;padding:12px;background:transparent;border:1px solid rgba(17,17,17,0.2);border-radius:0;color:#111111;font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;outline:none;}.ds-input:focus,.ds-input:focus-visible{border-color:#111111;}"
+    },
+    {
+      "name": "Header Nav",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Frosted 64px bar: wordmark, label links, thin bag icon.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-left\"><a class=\"ds-wordmark\" href=\"#\">finespotted cutthroat</a><a class=\"ds-nav-link\" href=\"#\">Drop 001</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></div><a class=\"ds-nav-link\" href=\"#\" aria-label=\"Shop the drop\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" aria-hidden=\"true\"><path d=\"M5 8h14l-1 12H6L5 8Z\"/><path d=\"M9 8V6a3 3 0 0 1 6 0v2\"/></svg></a></nav>",
+      "css": ".ds-nav{display:flex;height:64px;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(244,244,242,0.8);backdrop-filter:blur(12px);color:#111111;}.ds-nav-left{display:flex;align-items:center;gap:40px;}.ds-wordmark{font-family:'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif;font-weight:500;font-size:15px;letter-spacing:0.24em;text-transform:uppercase;color:inherit;text-decoration:none;white-space:nowrap;}.ds-nav-link{font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:inherit;text-decoration:none;transition:color 200ms;}.ds-nav-link:hover{color:#e2361f;}"
+    },
+    {
+      "name": "Edition Placard",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Names a piece like a wall label: edition line, Bodoni name, subtitle, price.",
+      "html": "<div class=\"ds-placard\"><p class=\"ds-placard-label\">Drop 001 · Limited to 50</p><h2 class=\"ds-placard-name\">Chomp Chomp Trucker</h2><p class=\"ds-placard-sub\">Black / embroidered</p><p class=\"ds-placard-price\">$85</p></div>",
+      "css": ".ds-placard{color:#111111;font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;}.ds-placard-label{font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a86;margin:0;}.ds-placard-name{font-family:'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif;font-weight:500;font-size:30px;line-height:1.2;letter-spacing:0.14em;text-transform:uppercase;margin:12px 0 0;}.ds-placard-sub{color:#8a8a86;margin:4px 0 0;font-size:16px;}.ds-placard-price{font-size:20px;font-variant-numeric:tabular-nums;margin:24px 0 0;}"
+    },
+    {
+      "name": "Countdown",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Quiet DD : HH : MM : SS timer in tabular numerals.",
+      "html": "<div class=\"ds-countdown\" role=\"timer\"><div class=\"ds-cd-part\"><div class=\"ds-cd-num\">07</div><div class=\"ds-cd-unit\">Days</div></div><span class=\"ds-cd-sep\">:</span><div class=\"ds-cd-part\"><div class=\"ds-cd-num\">04</div><div class=\"ds-cd-unit\">Hrs</div></div><span class=\"ds-cd-sep\">:</span><div class=\"ds-cd-part\"><div class=\"ds-cd-num\">07</div><div class=\"ds-cd-unit\">Min</div></div><span class=\"ds-cd-sep\">:</span><div class=\"ds-cd-part\"><div class=\"ds-cd-num\">14</div><div class=\"ds-cd-unit\">Sec</div></div></div>",
+      "css": ".ds-countdown{display:flex;align-items:flex-start;gap:20px;color:#111111;font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;}.ds-cd-part{text-align:center;}.ds-cd-num{font-size:30px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.2;}.ds-cd-unit{font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#8a8a86;margin-top:4px;}.ds-cd-sep{font-size:30px;font-weight:300;color:#8a8a86;line-height:1.2;}"
+    },
+    {
+      "name": "Waitlist Pill",
+      "kind": "chip",
+      "refersTo": "waitlist-pill",
+      "description": "The one rounded, shadowed element: a floating sign-up note.",
+      "html": "<div class=\"ds-pill\"><button class=\"ds-pill-open\" type=\"button\">be in the know first</button><button class=\"ds-pill-x\" type=\"button\" aria-label=\"Dismiss\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M3 3l10 10M13 3L3 13\"/></svg></button></div>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;gap:16px;padding:12px 12px 12px 20px;background:#ffffff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.12);color:#111111;font-family:Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;}.ds-pill-open{background:none;border:0;padding:0;font:inherit;font-size:15px;font-weight:600;color:inherit;cursor:pointer;}.ds-pill-x{background:none;border:0;padding:4px;color:rgba(17,17,17,0.6);cursor:pointer;display:flex;}.ds-pill-x:hover{color:#111111;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signed Edition",
+    "overview": "Every drop is an artwork release, not a catalog SKU. The site is the gallery wall it hangs on: soft paper-white, one object lit cleanly, and a small serif placard that names it, numbers it and says how many exist. The artist is the difference. Luxury fashion sites already own the Bodoni-caps lookbook, and hype shops own the countdown. finespotted keeps both tools but speaks the language of a print studio: drop number, edition size, medium, signature, provenance, and 1 of 1 on request.\n\nThe page is quiet so the piece can be loud. Density is low, type is small, and almost everything is ink on paper. Colour comes from the artwork itself, which is why the single accent changes with each drop. Restraint signals rarity: no badges, no tickers, no grids of cards. The surface a buyer sees should feel closer to a gallery's wall label than to a store.\n\nRejected outright: hype-shop clutter (flashing banners, fake stock counters, marquee tickers, loud sale badges) and the generic Shopify template (cart drawers, product-card grids, star ratings, \"You may also like\" rows).",
+    "keyCharacteristics": [
+      "Paper-white page, ink type, one accent pulled from the current drop's artwork",
+      "Bodoni Moda caps for the wordmark and names; Inter for everything else",
+      "Small, widely tracked uppercase labels act as the placard voice",
+      "Square corners everywhere except the floating waitlist pill",
+      "The product photo is always the largest thing on screen",
+      "Edition facts (drop number, edition size, price) are stated plainly, never dramatized"
+    ],
+    "rules": [
+      {
+        "name": "The Drop Accent Rule",
+        "body": "The accent belongs to the drop, not the brand. Each new drop takes its accent from its own artwork, replaces `flame` in `tailwind.config.js`, and keeps the same job: hover and status text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Resting Ink Rule",
+        "body": "At rest, nothing on the page is coloured except the artwork. The accent appears only in response to the visitor (hover) or to report a state (an error). Never use it as a background fill, a badge or a banner.",
+        "section": "colors"
+      },
+      {
+        "name": "The Small Placard Rule",
+        "body": "Display type stays small (30px at most). The product photo is the focal point; type names it, the way a wall label names a painting, and never competes with it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Bodoni Moda is only for names: the brand, a drop, a piece, a section. Anything a visitor reads to act (prices, buttons, policy, forms) is Inter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Wall Rule",
+        "body": "Nothing that belongs to the page casts a shadow. Only an element that floats above the page (the pill) gets one.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the product photo the largest element on every screen.",
+      "**Do** state edition facts plainly in label type: drop number, edition size, price, ship window.",
+      "**Do** take each drop's accent from its own artwork and use it only for hover and status text.",
+      "**Do** keep corners square (0px); the waitlist pill (12px) is the only exception.",
+      "**Do** use the disabled button to state a locked or sold-out state instead of hiding the button.",
+      "**Do** respect `prefers-reduced-motion`; transitions are 200–300ms colour and opacity changes only."
+    ],
+    "donts": [
+      "**Don't** add hype-shop clutter: flashing banners, fake stock counters, marquee tickers or loud sale badges.",
+      "**Don't** drift toward a generic Shopify template: cart drawers, product-card grids, star ratings or \"You may also like\" rows.",
+      "**Don't** set Bodoni Moda above 30px or use it for prices, buttons or body copy.",
+      "**Don't** use the accent as a background, badge or banner fill.",
+      "**Don't** add shadows to anything that belongs to the page.",
+      "**Don't** invent urgency, social proof or provenance that isn't real."
+    ]
+  }
+}
