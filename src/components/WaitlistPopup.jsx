@@ -3,8 +3,10 @@ import { FORMSPREE_FORM_ID } from '../config.js'
 import { readStore, writeStore } from '../storage.js'
 
 /*
- * "be in the know first" — a small pill in the bottom-left corner that opens
- * into an email sign-up. Submissions go to Formspree (no backend). Once a
+ * "be in the know first" — a small pill that opens into an email sign-up. On
+ * phones it sits just under the header, in the white space above the hero
+ * photo, so it never covers the drop title; wider screens keep it in the
+ * bottom-left corner. Submissions go to Formspree (no backend). Once a
  * visitor dismisses or signs up, it stays hidden on this browser.
  *
  * On phones the pill would sit on top of whatever text is scrolling past, so
@@ -66,8 +68,8 @@ export default function WaitlistPopup() {
 
   return (
     <div
-      className={`fixed bottom-4 left-4 z-40 max-w-[calc(100vw-2rem)] transition duration-300 motion-reduce:transition-none sm:bottom-6 sm:left-6 ${
-        scrolling ? 'pointer-events-none translate-y-[calc(100%+1rem)] opacity-0' : ''
+      className={`fixed left-4 top-20 z-40 max-w-[calc(100vw-2rem)] transition duration-300 motion-reduce:transition-none sm:bottom-6 sm:left-6 sm:top-auto ${
+        scrolling ? 'pointer-events-none -translate-y-2 opacity-0' : ''
       }`}
     >
       <div className="rounded-xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
