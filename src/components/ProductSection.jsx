@@ -16,10 +16,21 @@ export default function ProductSection({ product, canBuy, countdown, unlocked, o
   return (
     <section id="drop" className="scroll-mt-16 bg-paper">
       <div className="mx-auto grid max-w-screen-2xl gap-10 px-4 py-16 sm:px-8 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:py-24">
-        <div className="grid gap-2 sm:grid-cols-2">
-          {product.images.map((image, i) => (
-            <CropImage key={i} image={image} />
-          ))}
+        <div>
+          <div className="grid gap-2 sm:grid-cols-2">
+            {product.images.map((image, i) => (
+              <CropImage key={i} image={image} />
+            ))}
+          </div>
+          {product.worn?.length > 0 && (
+            <div className="mt-2 grid grid-cols-3 gap-2">
+              {product.worn.map((photo) => (
+                <div key={photo.src} className="aspect-square overflow-hidden bg-stone/10">
+                  <img src={photo.src} alt={photo.alt} loading="lazy" className="h-full w-full object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="lg:sticky lg:top-24 lg:self-start">

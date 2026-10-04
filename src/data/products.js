@@ -44,6 +44,12 @@ export const products = [
       webm: 'products/hero-loop.webm',
       poster: 'products/hero-loop-poster.jpg',
     },
+    // Real on-model photos, shown as a row of squares under the product shots
+    worn: [
+      { src: 'products/worn-front.jpg', alt: 'Chomp Chomp trucker worn, front' },
+      { src: 'products/worn-profile.jpg', alt: 'Chomp Chomp trucker worn, side profile' },
+      { src: 'products/worn-back.jpg', alt: 'Chomp Chomp trucker worn, back with CHOMP CHOMP lettering' },
+    ],
     images: [
       { src: 'products/chomp-chomp.webp', position: 'left', alt: 'Chomp Chomp trucker — front' },
       { src: 'products/chomp-chomp.webp', position: 'right', alt: 'Chomp Chomp trucker — back' },
