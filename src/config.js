@@ -19,7 +19,7 @@ export const BRAND = {
 export const DROP = {
   number: '001',
   name: 'Chomp Chomp',
-  date: '2026-10-10T12:00:00-04:00', // noon Eastern, Oct 10
+  date: '2026-10-31T11:00:00-05:00', // 11am Central (CDT), Oct 31
 }
 
 /*
